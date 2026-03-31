@@ -1,0 +1,6 @@
+// light green - #004838
+// dark green - #073127
+// dark gray - #333f3c
+// light gray - #ebede8
+// yellow - #e2fb6c
+// font - Aspekta
