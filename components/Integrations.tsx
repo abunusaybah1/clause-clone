@@ -1,27 +1,63 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 const integrations = [
-  { name: "Slack", bg: "#4A154B", color: "#fff", icon: "✦" },
-  { name: "Notion", bg: "#fff", color: "#000", icon: "N" },
-  { name: "Trello", bg: "#0052CC", color: "#fff", icon: "T" },
-  { name: "PayPal", bg: "#003087", color: "#fff", icon: "P" },
-  { name: "Drive", bg: "#fff", color: "#4285F4", icon: "▲" },
-  { name: "Ads", bg: "#fff", color: "#4285F4", icon: "A" },
-  { name: "WhatsApp", bg: "#25D366", color: "#fff", icon: "W" },
-  { name: "Jira", bg: "#0052CC", color: "#fff", icon: "J" },
-  { name: "Figma", bg: "#F24E1E", color: "#fff", icon: "F" },
-  { name: "Zapier", bg: "#FF4A00", color: "#fff", icon: "Z" },
-  { name: "Monday", bg: "#FF3D57", color: "#fff", icon: "M" },
-  { name: "Clickup", bg: "#7B68EE", color: "#fff", icon: "C" },
-  { name: "Shopify", bg: "#96BF48", color: "#fff", icon: "S" },
-  { name: "Gitlab", bg: "#FC6D26", color: "#fff", icon: "G" },
+  {
+    name: "Notion",
+    bg: "#fff",
+    color: "#000",
+    src: "/images/logos/notion.png",
+  },
+  {
+    name: "Trello",
+    bg: "#0052CC",
+    color: "#fff",
+    src: "/images/logos/trello.png",
+  },
+  {
+    name: "Slack",
+    bg: "#4A154B",
+    color: "#fff",
+    src: "/images/logos/slack.png",
+  },
+  {
+    name: "PayPal",
+    bg: "#003087",
+    color: "#fff",
+    src: "/images/logos/paypal.png",
+  },
+  {
+    name: "Drive",
+    bg: "#fff",
+    color: "#4285F4",
+    src: "/images/logos/drive.png",
+  },
+  {
+    name: "Ads",
+    bg: "#fff",
+    color: "#4285F4",
+    src: "/images/logos/ads.png",
+  },
+  {
+    name: "WhatsApp",
+    bg: "#25D366",
+    color: "#fff",
+    src: "/images/logos/whatsapp.png",
+  },
+  { name: "Jira", bg: "#0052CC", color: "#fff", src: "/images/logos/jira.png" },
+  {
+    name: "Figma",
+    bg: "#F24E1E",
+    color: "#fff",
+    src: "/images/logos/figma.png",
+  },
 ];
 
 const Integrations = () => {
-  const row1 = integrations.slice(0, 7);
-  const row2 = integrations.slice(7, 14);
+  const row1 = integrations.slice(0, 4);
+  const row2 = integrations.slice(4, 8);
 
   return (
     <section className="bg-[#073127] py-14 sm:py-18 lg:py-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col items-center gap-8 sm:gap-10 overflow-hidden">
@@ -50,28 +86,32 @@ const Integrations = () => {
       {/* Integration icons — Row 1 */}
       <div className="flex gap-3 sm:gap-4 flex-wrap justify-center w-full max-w-3xl">
         {row1.map((item) => (
-          <div
+          <Image
             key={item.name}
-            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shrink-0"
+            src={item.src}
+            alt={item.name}
+            width={40}
+            height={40}
+            className="p-1 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shrink-0"
             style={{ background: item.bg, color: item.color }}
             title={item.name}
-          >
-            {item.icon}
-          </div>
+          />
         ))}
       </div>
 
       {/* Integration icons — Row 2 */}
       <div className="flex gap-3 sm:gap-4 flex-wrap justify-center w-full max-w-3xl -mt-4">
         {row2.map((item) => (
-          <div
+          <Image
             key={item.name}
-            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shrink-0"
+            src={item.src}
+            alt={item.name}
+            width={40}
+            height={40}
+            className="p-1 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shrink-0"
             style={{ background: item.bg, color: item.color }}
             title={item.name}
-          >
-            {item.icon}
-          </div>
+          />
         ))}
       </div>
     </section>

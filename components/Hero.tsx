@@ -100,7 +100,7 @@ const Hero = () => {
           <div className="relative">
             <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-md">
               <Image
-                src="/images/hero/avatar.png"
+                src="/images/hero/avatar3.png"
                 alt="User"
                 width={64}
                 height={64}
@@ -116,7 +116,7 @@ const Hero = () => {
           <div className="relative">
             <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-md">
               <Image
-                src="/images/hero/avatar.png"
+                src="/images/hero/avatar4.png"
                 alt="User"
                 width={64}
                 height={64}

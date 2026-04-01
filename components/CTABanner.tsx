@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CTABanner = () => {
   return (
-    <section className="bg-[#073127] mx-4 sm:mx-8 md:mx-12 lg:mx-16 xl:mx-24 mb-8 sm:mb-12 rounded-2xl sm:rounded-3xl py-10 sm:py-14 lg:py-16 px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
+    <section className="bg-[#333f3c]   py-10 sm:py-14 lg:py-16 px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
       <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold max-w-xs sm:max-w-sm lg:max-w-md leading-tight text-center sm:text-left">
         Discover the full scale of{" "}
         <span className="underline decoration-[#e2fb6c]">Clause</span>{" "}
