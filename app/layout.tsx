@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={aspekta.className}>
-      <body className="min-h-full flex flex-col p-4 pt-30">
+    <html lang="en" className={`aspekta.className`}>
+      <body className="min-h-full flex flex-col p-0 m-0">
         <Header />
         {children}
         <Footer />
